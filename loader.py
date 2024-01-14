@@ -3,7 +3,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from utils.db_api.database_set import Database_Settings
 from data import config
 
-bot = Bot(token=config.BOT_TOKEN, parse_mode=types.ParseMode.HTML)
+bot = Bot(token=config.BOT_TOKEN, parse_mode=types.ParseMode.HTML, proxy="http://proxy.server:3128")
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
 db_manager = Database_Settings("bank.db")
